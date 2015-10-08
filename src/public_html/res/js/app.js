@@ -1,4 +1,5 @@
 $(function (){
+	
 	$(document).ready(function() {
 		if($.cookie("isLogin")){
 			$(".isLogin").show();
@@ -76,15 +77,15 @@ $(function (){
 
 	$("body > header .search input").blur(function() {
 		var $input = $("body > header .search > input");
-			$input.val("");
-			$input.attr("placeholder", "");
+		$input.val("");
+		$input.attr("placeholder", "");
 
-			$input.animate({
-				width: "20px"
-			},
-			{
-				duration:300,
-				easing: "easeOutQuad"
-			});
+		$input.animate({
+			width: "20px"
+		},
+		{
+			duration:300,
+			easing: "easeOutQuad"
+		});
 	});
 })
