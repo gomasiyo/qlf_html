@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "compass";
+@import "define";
+@import "header";
+@import "main";
+@import "sign-in";
+
+html, body{
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+	background: $BACKGROUND;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.isLogin, .notLogin{
+	display: none;
+}
