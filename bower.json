@@ -1,0 +1,19 @@
+{
+  "name": "QLF",
+  "version": "0.1.0",
+  "homepage": "https://github.com/gomasiyo/qlf_html",
+  "authors": [
+    "Potato4d"
+  ],
+  "description": "Quick Link Form",
+  "main": "src/public_html/res/js/app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
