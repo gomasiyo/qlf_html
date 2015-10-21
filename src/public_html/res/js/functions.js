@@ -10,3 +10,12 @@
 		}
 	});
 })(jQuery);
+
+function logOut(){
+	$.removeCookie("id");
+	$.removeCookie("name");
+	$.removeCookie("screen_name");
+	$.removeCookie("isLogin");
+	$.removeCookie("token");
+	location.href="/";
+}

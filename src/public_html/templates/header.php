@@ -17,7 +17,7 @@
 
 			<div class="user">
 				<img src="/res/images/icon.png">
-				<span>%%ScreenName%%</span>
+				<span>%%sn%%</span>
 				<ul>
 					<li>User</li>
 
@@ -38,11 +38,11 @@
 			<ul class="navigation list">
 				<li><a href="/">QLF</a></li>
 				<li><a href="/dashboard/">Dashboard</a></li>
-				<li><a class="logout">Log out</a></li>
+				<!-- <li><a class="logout">Log out</a></li> -->
 			</ul>
 
-			<ul class="sign-in list">
-				<li><a class="open-sign-in">Sign in</a></li>
+			<ul class="signin list">
+				<li><a class="open-signin">Sign in</a></li>
 			</ul>
 		</nav>
 	</header>

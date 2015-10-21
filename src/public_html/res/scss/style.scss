@@ -4,7 +4,7 @@
 @import "define";
 @import "header";
 @import "main";
-@import "sign-in";
+@import "signin";
 
 html, body{
 	margin: 0;
@@ -17,4 +17,58 @@ html, body{
 
 .isLogin, .notLogin{
 	display: none;
+}
+
+
+
+.submit{
+	display: block;
+	margin: 0 auto;
+	padding: 8px 20px;
+
+	font-size: 14px;
+
+	color: #fff;
+	background: $PRIMARY;
+	border: none;
+	border:solid 2px $PRIMARY;
+	position: relative;
+	z-index: 10;
+
+	&:hover{
+		color: $PRIMARY;
+		cursor: pointer;
+	}
+
+	&:after{
+		content: "";
+		
+		top: calc(50% - 8px);
+		top: -webkit-calc(50% - 8px);
+		left: calc(50% - 8px);
+		left: -webkit-calc(50% - 8px);
+		position: absolute;
+
+		width: 16px;
+		height: 16px;
+
+		opacity: 0;
+
+		z-index: -10;
+		border-radius: 100%;
+		transition:all 0.3s ease-out;
+	}
+
+	&:hover:after{
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		opacity: 1.0;
+
+		border-radius: 0;
+		background: #fff;
+	}
 }

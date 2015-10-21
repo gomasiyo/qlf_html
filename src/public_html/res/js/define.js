@@ -1,0 +1,1 @@
+var DOMAIN = "http://qlf-goma.cloudapp.net";

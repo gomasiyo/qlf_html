@@ -8,12 +8,14 @@ body > header{
 	background: $PRIMARY;
 
 	nav{
+		@include clearfix();
+
 		width: inherit;
 		max-width: 1140px;
 		height: inherit;
 		margin: 0 auto;
 		display: block;
-		@include clearfix();
+		overflow: visible;
 
 		a{
 			color: #fff;
@@ -21,13 +23,13 @@ body > header{
 		}
 
 		ul.navigation{
-			width: 320px;
+			width: 320px + $BORDER_RIGHT;
 			height: 45px;
 			float: left;
 
 			li{
 				&:first-child{
-					width: 119px;
+					width: 120px - $BORDER_LEFT;
 				}
 			}
 		}
@@ -41,6 +43,7 @@ body > header{
 
 			border-radius: 2px;
 			position: relative;
+			z-index: 100;
 
 			input{
 				width: 20px;
@@ -80,10 +83,11 @@ body > header{
 				margin:auto;
 				position: absolute;
 
-				padding-top: 1px
+				padding-top: 1px;
+				z-index:-1;
 			}
 
-			&:hover{
+			&:hover, &:active{
 				&:after{
 					height: 22px;
 					font-size: 20px;
@@ -91,6 +95,11 @@ body > header{
 					padding-top: 0;
 				}
 			}
+
+			*:hover{
+				cursor: pointer;
+			}
+
 		}
 
 		.user{
@@ -101,27 +110,87 @@ body > header{
 			display: block;
 
 			border: solid 1px #fff;
-			border-radius: 2px;
 			
 			margin: 4px 5px 5px;
+			@include clearfix();
+			overflow: visible;
 
 			img{
 				width: 32px;
 				height: 32px;
 				border-radius: 50%;
-				margin: 1px 0 1px 9px;
+				margin: 1px 5px 1px 9px;
+				float: left;
+			}
+
+			span{
+				display: block;
+				width: 68px;
+				height: 25px;
+				float: left;
+				margin-top: 6px;
+				overflow: hidden;
+			}
+
+			ul{
+				background: #1E90FF;
+				border: solid 1px #fff;
+				border-top:none;
+				margin-top: 33px;
+				width: 100px;
+				margin-left: -1px;
+				display: block;
+
+				height: 0px;
+				overflow: hidden;
+				position: relative;
+
+				-webkit-transition:height 0.3s;
+				transition:height 0.3s;
+
+				list-style: none;
+				padding:0 10px;
+
+				&.active{
+					height: 100px;
+					border: solid 1px #fff;
+
+					&:before{
+						top: -1px;
+					}
+				}
+
+				&:before{
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background: #fff;
+					z-index: 10px;
+				}
 			}
 
 			& > *{
 				vertical-align: middle;
 			}
+
+			&:hover{
+				cursor: pointer;
+			}
 		}
 
-		.sign-in{
-			width: 100px;
+		.signin{
+			width: 100px + $BORDER_BOTH;
 			height: 45px;
 
 			float: right;
+
+			li{
+				border-right:solid 1px $NAV_HOVER;
+			}
 		}
 
 		.list{
@@ -129,10 +198,9 @@ body > header{
 			padding:0;
 			list-style: none;
 			font-size: 0; 
-			border-right:solid 1px $NAV_HOVER;
 
 			li{
-				width: 99px;
+				width: 100px - $BORDER_LEFT;
 				height: inherit;
 				text-align: center;
 
@@ -151,6 +219,10 @@ body > header{
 				&:hover{
 					cursor: pointer;
 					background: $NAV_HOVER;
+				}
+
+				&:last-child{
+					border-right:solid 1px $NAV_HOVER;
 				}
 			}
 		}

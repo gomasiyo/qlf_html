@@ -8,26 +8,25 @@ $(function (){
 		}
 	});
 
-	$("body > header .search").hover(function (){
+	$("body > header .search").click(function (){
 		var $input = $("body > header .search > input");
-		if($input.width() < 100){
-			$input.attr("placeholder", "search QLF...");
-			$input.focus();
+		// if($input.width() < 100){
+		$input.attr("placeholder", "search QLF...");
+		$input.focus();
 
-			$input.animate({
-				width: "186px"
-			},
-			{
-				duration:300,
-				easing: "easeOutQuad"
-			});
-		}
-	},
-	function (){
+		$input.animate({
+			width: "186px"
+		},
+		{
+			duration:300,
+			easing: "easeOutQuad"
+		});
+		// }
+	});
+
+
+	$("body > header .search").focusout(function (){
 		var $input = $("body > header .search > input");
-		$input.val("");
-		$input.attr("placeholder", "");
-		$input.blur();
 
 		$input.animate({
 			width: "20px"
@@ -35,18 +34,24 @@ $(function (){
 		{
 			duration:300,
 			easing: "easeOutQuad"
+		},function (){
+			$input.val("");
+			$input.attr("placeholder", "");
 		});
-	}
-	);
+	});
 
-	$("#sign-in button").click(function (event){
+	$("body > header .user").click(function (event){
+		$(this).children('ul').toggleClass("active");
+	})
+
+	$("#signin button").click(function (event){
 		event.preventDefault();
 
 		$.ajax({
-			url: 'http://qlf-goma.cloudapp.net/api/account/login',
+			url: DOMAIN+'/api/account/login',
 			type: 'POST',
 			dataType: 'json',
-			data: $("#sign-in form").serialize(),
+			data: $("#signin form").serialize(),
 		})
 		.done(function (data){
 			if(data.status){
@@ -70,9 +75,9 @@ $(function (){
 		location.href="/";
 	});
 
-	$(".open-sign-in").click(function(event) {
-		$("#sign-in").fadeIn();
-		$("#sign-in form input:first-child").focus();
+	$(".open-signin").click(function(event) {
+		$("#signin").fadeIn();
+		$("#signin form input:first-child").focus();
 	});
 
 	$("body > header .search input").blur(function() {

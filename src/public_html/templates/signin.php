@@ -1,4 +1,4 @@
-<div id="sign-in">
+<div id="signin">
 
 	<div>
 		<img src="/res/images/200x80.png">
@@ -11,8 +11,8 @@
 
 		<!-- <label class="check"><input type="checkbox" name="remember-me">Remember Me</label> -->
 
-		<a href="" class="forget">Forget your password?</a>
+		<a href="/account/signup" class="signup">If you haven't account, please click here.</a>
 
-		<button class="submit">Sign Up</button>
+		<button class="submit">Sign in</button>
 	</form>
 </div>

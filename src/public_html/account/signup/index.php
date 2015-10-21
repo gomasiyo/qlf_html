@@ -4,13 +4,13 @@
 		<h1>Sign up QLF</h1>
 		<form method="post">
 			<input type="text" name="user-id"   placeholder="User ID">
-			<input type="text" name="user-name" placeholder="User Name">
+			<input type="text" name="user-name" placeholder="Nickname">
 			<input type="password" name="user-password" placeholder="Password">
 			<input type="password" name="user-again" placeholder="Password again">
 
 			<input type="hidden" id="csrf" name="csrf" value="<?php #code ?>">
 
-			<input type="submit" value="Sign up">
+			<button class="submit">Sign up</button>
 		</form>
 	</main>
 
