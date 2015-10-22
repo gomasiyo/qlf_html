@@ -4,6 +4,14 @@
 	<title>Title</title>
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
+	
+	<script src="/res/js/jquery.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="/res/js/define.js"></script>
+	<script src="/res/js/functions.js"></script>
+	<script src="/res/js/app.js"></script>
+	<script src="/res/js/jquery.cookie.js"></script>
+
 </head>
 <body>
 
@@ -19,11 +27,10 @@
 				<img src="/res/images/icon.png">
 				<span>%%sn%%</span>
 				<ul>
-					<li>User</li>
-
-					<li>Settings</li>
-					<li>Help</li>
-					<li>Sign out</li>
+					<li><a href="">User</a></li>
+					<li><a href="">Settings</a></li>
+					<li><a href="">Help</a></li>
+					<li><a href="">Sign out</a></li>
 				</ul>
 			</div>
 

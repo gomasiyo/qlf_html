@@ -40,9 +40,15 @@ $(function (){
 		});
 	});
 
-	$("body > header .user").click(function (event){
+	$("body > header .user").click(function(event){
 		$(this).children('ul').toggleClass("active");
 	})
+
+	$("body > header .user a").click(function(event) {
+		event.preventDefault();
+		location.href=$(this).attr("href");
+		return false;
+	});
 
 	$("#signin button").click(function (event){
 		event.preventDefault();
