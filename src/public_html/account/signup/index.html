@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup - QLF</title>
+
+	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap.css">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">QLF</a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="/dashboard">DashBoard</a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" data-toggle="modal" data-target="#sign-in">Sign in</a></li>
+			</ul>
+			
+			<ul class="nav navbar-nav navbar-right" data-isLogin="" id="userInfo">
+				
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						%%screenname%% <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="/user/%%name%%">マイページ</a></li>
+						<li class="signout"><a href="#">ログアウト</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+
+			<div class="col-md-8">
+				<form method="post" id="signup">
+					
+					<div class="form-group">
+						<input type="name"           class="form-control" name="name"         placeholder="ID" required>
+					</div>
+					
+					<div class="form-group">
+						<input type="email"          class="form-control" name="email"        placeholder="Email" required>
+					</div>
+					
+					<div class="form-group">
+						<input type="name"           class="form-control" name="screenname"   placeholder="Nickname" required>
+					</div>
+
+					<div class="form-group">
+						<input type="password"       class="form-control" name="passwd"       placeholder="Password" required>
+					</div>
+					
+					<div class="form-group">
+						<input type="password-again" class="form-control" name="passwd-again" placeholder="Password-again" required>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Sign up</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="sign-in" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+
+			<div class="modal-content">
+
+				<div class="modal-body">
+					
+					<h4 class="modal-title" id="modal-label">Sign in</h4>
+
+					<form>
+					
+						<div class="form-group">
+							<input type="name" class="form-control" name="name" placeholder="ID or password" required>
+						</div>
+
+						<div class="form-group">
+							<input type="password" class="form-control" name="passwd" placeholder="Password" required>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="/res/js/jquery.js"></script>
+	<script src="/res/js/jquery.cookie.js"></script>
+	<script src="/res/js/bootstrap.js"></script>
+	<script src="/res/js/function.js"></script>
+	<script src="/res/js/register.js"></script>
+
+</body>
+</html>
