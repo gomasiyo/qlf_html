@@ -1,0 +1,11 @@
+/* line 1, ../scss/style.scss */
+.navbar-right {
+  display: none;
+}
+
+/* line 6, ../scss/style.scss */
+#sign-in h4 {
+  text-align: center;
+  margin: 10px;
+  font-weight: normal;
+}
