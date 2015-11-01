@@ -1,6 +1,22 @@
 var DOMAIN = "http://qlf-goma.cloudapp.net/";
 
 $(function (){
+	$(document).on("submit", "#signin form", function (){
+		event.preventDefault();
+		$.ajax({
+			url: DOMAIN+'/api/account/login',
+			type: 'POST',
+			dataType: 'json',
+			data: $(this).serialize(),
+		})
+		.done(function(data) {
+			console.log(data);
+			saveLoginData(data);
+			location.href="/dashboard";
+		});
+		return false;
+	});
+
 	$(document).on("click", ".signout", function (){
 		$.removeCookie("name");
 		$.removeCookie("password");

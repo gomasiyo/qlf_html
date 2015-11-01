@@ -66,7 +66,7 @@ $(function (){
 			.done(function(data) {
 				console.log(data);
 				saveLoginData(data);
-				//location.href="/dashboard";
+				location.href="/dashboard";
 			});
 
 		});
